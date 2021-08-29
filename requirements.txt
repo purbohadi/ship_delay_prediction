@@ -1,5 +1,7 @@
-boto3==1.9.169
-botocore==1.12.169
-numpy==1.16.4
-pandas==0.24.2
-python-dateutil==2.8.0
+boto3==1.18.31
+botocore==1.21.31
+jsonpatch==1.16
+jsonpointer==1.10
+jsonschema==2.6.0
+numpy==1.19.5
+simplejson==3.17.3
