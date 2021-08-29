@@ -9,7 +9,6 @@ from decimal import Decimal
 IMOS = [9811000]
 
 def lambda_handler(event, context):
-    print("Hello!")
     """
         Criteria of delay:
         Current diff (eta-timeOfLastPost) > average diff (eta-timeOfLastPost) from historical data
@@ -24,9 +23,9 @@ def lambda_handler(event, context):
         time_eta = decoded['reported_eta']
         time_cur = decoded['time_of_latest_position']
 
-        json_historical_file.close()
+        json_vesell_file.close()
     except (ValueError, KeyError, TypeError):
-        print "JSON format error"
+        print("JSON format error")
 
     curr_diff = calc_diff_time(time_eta, time_cur)
 
@@ -43,12 +42,14 @@ def lambda_handler(event, context):
 
         json_historical_file.close()
     except (ValueError, KeyError, TypeError):
-        print "JSON format error"
+        print("JSON format error")
 
     average_diff = calc_average_diff_time(diff_values)
     if(cur_diff > average_diff):
+        print("Vessel Will Delay")
         return true
-    elif
+    else:
+        print("Vessel Will Not Delay")
         return false
 
     return {
