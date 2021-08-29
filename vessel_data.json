@@ -4,7 +4,7 @@
     "destination_port": "Qingdao",
     "reported_eta": "2021-08-27 00:29:28",
     "reported_destination": "Qingdao",
-    "current_port": "",
+    "current_port": "-",
     "imo": "9811000",
     "time_of_latest_position": "2021-08-26 00:29:28",
     "latitude": "14.36867",
